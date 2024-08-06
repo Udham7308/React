@@ -1,8 +1,8 @@
 
-import React   from 'react'
+import React, {useId} from 'react';
 
 function InputBox({
-    label,
+    label,    
     amount,
     onAmountChange,
     onCurrencyChange,
@@ -12,7 +12,7 @@ function InputBox({
     currencyDisable = false,
     className = "",
 }) {
-   const amountInputId = useId()
+    const amountInputId = useId()
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
@@ -40,15 +40,16 @@ function InputBox({
                 >
                     
                         {currencyOptions.map((currency) => (
-                            <option key={currency} value={currency}>
+                            <option key={currency} value={currency}> 
                             {currency}
                             </option>
-                        ))}
+                        ))} 
                 
-                </select>
+                </select> 
             </div>
         </div>
     );
 }
 
 export default InputBox;
+// remember the key in loop in react.
