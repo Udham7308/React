@@ -12,19 +12,18 @@ function Login() {
     }
     return (
        <div>
-        <h1>Login</h1>
+        <h1>Login Page</h1>
         <input type="text" 
         value={username}
         onChange={(e)=>setUsername(e.target.value)}
         placeholder='username' />
+        {"  "}
         <input type="text" 
         value={password}
         onChange={(e)=>setPassword(e.target.value)}
         placeholder='password' />
-        <button onClick={handleSubmit}>Submit</button>
-        
-       </div>
-       
+        <button onClick={handleSubmit}>Submit</button>        
+       </div>       
     )
 }
 
